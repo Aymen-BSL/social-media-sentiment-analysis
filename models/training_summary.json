@@ -1,0 +1,19 @@
+{
+  "best_model": "linear_svm",
+  "leaderboard": [
+    {
+      "model": "linear_svm",
+      "validation_macro_f1": 0.4000000000000001
+    },
+    {
+      "model": "logistic_regression",
+      "validation_macro_f1": 0.13333333333333333
+    },
+    {
+      "model": "multinomial_nb",
+      "validation_macro_f1": 0.13333333333333333
+    }
+  ],
+  "data_path": "C:\\Me\\fac-master\\social-media-sentiment-analysis\\data\\processed\\comments_clean.csv",
+  "saved_model_path": "C:\\Me\\fac-master\\social-media-sentiment-analysis\\models\\best_model.pkl"
+}

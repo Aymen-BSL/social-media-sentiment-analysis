@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "post_id": "post_1",
+      "title": "Highly positive launch reactions",
+      "comments": [
+        "Love this release, great job!",
+        "This is amazing and super helpful.",
+        "Very clean work, I enjoyed it.",
+        "Nice improvements overall.",
+        "Honestly this is excellent."
+      ]
+    },
+    {
+      "post_id": "post_2",
+      "title": "Mostly negative reactions",
+      "comments": [
+        "This update is frustrating.",
+        "I do not like the new direction.",
+        "Bad experience for me.",
+        "Confusing and messy.",
+        "Please undo this change."
+      ]
+    },
+    {
+      "post_id": "post_3",
+      "title": "Mixed audience response",
+      "comments": [
+        "Great visuals but the explanation is weak.",
+        "I like parts of it.",
+        "It is okay, nothing special.",
+        "Not very useful for me.",
+        "Some good ideas, some bad ones."
+      ]
+    }
+  ]
+}
