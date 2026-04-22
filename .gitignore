@@ -25,3 +25,10 @@ ENV/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Jupyter/IPython
+.ipynb_checkpoints
+.ipython/
+.jupyter/
+.jupyter-data/
+.jupyter-runtime/
