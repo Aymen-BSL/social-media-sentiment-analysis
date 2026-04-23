@@ -32,6 +32,8 @@ $kernelSpec = @{
     }
 }
 
-$kernelSpec | ConvertTo-Json -Depth 5 | Set-Content -Encoding UTF8 (Join-Path $kernelDir "kernel.json")
+$kernelJsonPath = Join-Path $kernelDir "kernel.json"
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllText($kernelJsonPath, ($kernelSpec | ConvertTo-Json -Depth 5), $utf8NoBom)
 
 & $pythonExe -m notebook $notebookPath

@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "password": false,
+  "pid": 16168,
+  "port": 8888,
+  "root_dir": "C:\\Me\\fac-master\\social-media-sentiment-analysis\\notebooks",
+  "secure": false,
+  "sock": "",
+  "token": "8625592fc87d18565e1bc07cdfc09bcded7fd04090137948",
+  "url": "http://localhost:8888/",
+  "version": "2.17.0"
+}
