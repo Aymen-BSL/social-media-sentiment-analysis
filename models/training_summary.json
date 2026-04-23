@@ -6,6 +6,10 @@
       "validation_macro_f1": 0.4000000000000001
     },
     {
+      "model": "random_forest",
+      "validation_macro_f1": 0.35555555555555557
+    },
+    {
       "model": "logistic_regression",
       "validation_macro_f1": 0.13333333333333333
     },

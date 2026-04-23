@@ -21,6 +21,7 @@ def ensure_training_dependencies() -> None:
         from sklearn.model_selection import train_test_split  # noqa: F401
         from sklearn.naive_bayes import MultinomialNB  # noqa: F401
         from sklearn.pipeline import Pipeline  # noqa: F401
+        from sklearn.ensemble import RandomForestClassifier  # noqa: F401
         from sklearn.svm import LinearSVC  # noqa: F401
     except ImportError as exc:
         raise SystemExit(
@@ -32,6 +33,7 @@ def train_models(data_path: Path = PROCESSED_DATA_PATH) -> dict:
     ensure_training_dependencies()
 
     import pandas as pd
+    from sklearn.ensemble import RandomForestClassifier
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.linear_model import LogisticRegression
     from sklearn.metrics import f1_score
@@ -63,6 +65,7 @@ def train_models(data_path: Path = PROCESSED_DATA_PATH) -> dict:
         "logistic_regression": LogisticRegression(max_iter=2000),
         "linear_svm": LinearSVC(),
         "multinomial_nb": MultinomialNB(),
+        "random_forest": RandomForestClassifier(n_estimators=200, random_state=42),
     }
 
     leaderboard = []
@@ -120,6 +123,9 @@ def train_models(data_path: Path = PROCESSED_DATA_PATH) -> dict:
 
 def main() -> None:
     result = train_models()
+    print("Model comparison:")
+    for item in result["summary"]["leaderboard"]:
+        print(f"- {item['model']}: validation_macro_f1={item['validation_macro_f1']:.3f}")
     print(f"Best model: {result['summary']['best_model']}")
     print(f"Saved model: {result['summary']['saved_model_path']}")
     print(f"Test accuracy: {result['metrics']['accuracy']:.3f}")

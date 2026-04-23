@@ -1,0 +1,14 @@
+﻿{
+    "argv":  [
+                 "C:\\Me\\fac-master\\social-media-sentiment-analysis\\.venv\\Scripts\\python.exe",
+                 "-m",
+                 "ipykernel_launcher",
+                 "-f",
+                 "{connection_file}"
+             ],
+    "language":  "python",
+    "display_name":  "Python (.venv) - Social Media Sentiment Analysis",
+    "metadata":  {
+                     "debugger":  true
+                 }
+}
